@@ -1,17 +1,22 @@
 ﻿using Tyuiu.MihajlichenkoSB.Sprint3.Task0.V28.Lib;
+
 namespace Tyuiu.MihajlichenkoSB.Sprint3.Task0.V28.Test
 {
     [TestClass]
-    public sealed class DataServiceTest
+    public class DataServiceTests
     {
         [TestMethod]
-        public void ValidExpression()
+        public void TestGetMultiplySeries()
         {
             DataService ds = new DataService();
             double value = 0.25;
-            double result = ds.GetMultiplySeries(value);
+            int startValue = 1;
+            int stopValue = 17;
+            double expected = 411589.537;
 
-            Assert.AreEqual(2.0, result, 1e-12, "Result should be approximately 2.0");
+            double actual = ds.GetMultiplySeries(value, startValue, stopValue);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }
