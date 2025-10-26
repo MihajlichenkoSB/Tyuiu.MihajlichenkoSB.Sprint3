@@ -1,7 +1,7 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint3;
 namespace Tyuiu.MihajlichenkoSB.Sprint3.Task0.V28.Lib
 {
-    public class DataService
+    public class DataService : ISprint3Task0V28
     {
         public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
