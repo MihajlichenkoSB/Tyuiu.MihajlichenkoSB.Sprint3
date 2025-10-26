@@ -29,7 +29,7 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23
             int start = 1;
             int stop = 5;
 
-            double result = ds.GetSumSeries(x, start, stop);
+            double result = ds.GetMultiplySeries(x, start, stop);
 
 
             Console.WriteLine("****************************************************************************");

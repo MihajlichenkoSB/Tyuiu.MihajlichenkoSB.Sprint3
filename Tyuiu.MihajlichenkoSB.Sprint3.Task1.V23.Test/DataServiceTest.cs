@@ -7,17 +7,24 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
         [TestMethod]
         public void TestMethod1()
         {
+            // arrange
             DataService ds = new DataService();
             double x = 5;
             int startValue = 1;
             int stopValue = 5;
 
-            double actual = ds.GetSumSeries(x, startValue, stopValue);
+            // act
+            double actual = ds.GetMultiplySeries(5, startValue, stopValue);
 
-            double expected = 300 / (Math.Sin(5) + Math.Pow(5, 1));
-            expected *= 300 / (Math.Sin(5) + Math.Pow(5, 2));
+            // compute expected
+            double expected = 1.0;
+            for (int k = startValue; k <= stopValue; k++)
+            {
+                expected *= 300.0 / (Math.Sin(x) + Math.Pow(x, k));
+            }
             expected = Math.Round(expected, 3);
 
+            // assert
             Assert.AreEqual(expected, actual);
         }
     }
