@@ -9,6 +9,7 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Lib
             double result = 1.0;
             int k = startValue;
 
+            // Цикл while — как требует условие
             while (k <= stopValue)
             {
                 result *= 300.0 / (Math.Sin(x) + Math.Pow(x, k));

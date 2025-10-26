@@ -6,15 +6,18 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestGetMultiplySeries()
         {
+            // arrange
             DataService ds = new DataService();
             double x = 5;
             int startValue = 1;
             int stopValue = 5;
 
+            // act
             double actual = ds.GetMultiplySeries(x, startValue, stopValue);
 
+            // manually compute expected
             double expected = 1.0;
             for (int k = startValue; k <= stopValue; k++)
             {
@@ -22,6 +25,7 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
             }
             expected = Math.Round(expected, 3);
 
+            // assert
             Assert.AreEqual(expected, actual);
         }
     }
