@@ -7,11 +7,9 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task0.V28.Lib
         {
             double result = 1.0;
 
-            for (int k = startValue; k <= stopValue; k++)
+            for (int i = startValue; i <= stopValue; i++)
             {
-                // Используем градусы → радианы
-                double term = value + 1 / Math.Cos(k * Math.PI / 180);
-                result *= term;
+                result *= Math.Pow(value, 3) * i + 2;
             }
 
             return Math.Round(result, 3);
