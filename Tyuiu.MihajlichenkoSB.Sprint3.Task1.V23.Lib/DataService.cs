@@ -19,7 +19,7 @@ public double GetMultiplySeries(int value, int startValue, int stopValue)
         k++;
     }
 
-             return product;
+             return Math.Round(product, 3);
         }
     }
 }
