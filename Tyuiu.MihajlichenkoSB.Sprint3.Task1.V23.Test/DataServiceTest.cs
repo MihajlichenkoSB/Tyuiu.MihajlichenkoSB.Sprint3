@@ -1,4 +1,5 @@
 ﻿using Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Lib;
+
 namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
 {
     [TestClass]
@@ -7,16 +8,13 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
         [TestMethod]
         public void TestMethod1()
         {
-            // arrange
             DataService ds = new DataService();
             double x = 5;
             int startValue = 1;
             int stopValue = 5;
 
-            // act
-            double actual = ds.GetMultiplySeries(5, startValue, stopValue);
+            double actual = ds.GetMultiplySeries(x, startValue, stopValue);
 
-            // compute expected
             double expected = 1.0;
             for (int k = startValue; k <= stopValue; k++)
             {
@@ -24,7 +22,6 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
             }
             expected = Math.Round(expected, 3);
 
-            // assert
             Assert.AreEqual(expected, actual);
         }
     }
