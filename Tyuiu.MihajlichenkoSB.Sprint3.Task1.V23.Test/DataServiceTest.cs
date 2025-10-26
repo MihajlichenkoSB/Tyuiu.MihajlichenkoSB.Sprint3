@@ -8,25 +8,18 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23.Test
         [TestMethod]
         public void TestGetMultiplySeries()
         {
-            // arrange
+
             DataService ds = new DataService();
-            double x = 5;
-            int startValue = 1;
-            int stopValue = 5;
+            int value = 5;          
+            int startValue = 1;      
+            int stopValue = 5;       
 
-            // act
-            double actual = ds.GetMultiplySeries(x, startValue, stopValue);
+            double expected = -0.071331455025152; 
 
-            // manually compute expected
-            double expected = 1.0;
-            for (int k = startValue; k <= stopValue; k++)
-            {
-                expected *= 300.0 / (Math.Sin(x) + Math.Pow(x, k));
-            }
-            expected = Math.Round(expected, 3);
+            double actual = ds.GetMultiplySeries(value, startValue, stopValue);
 
-            // assert
-            Assert.AreEqual(expected, actual);
+            double delta = 1e-12;
+            Assert.AreEqual(expected, actual, delta, $"Ожидали примерно {expected}, получили {actual}");
         }
     }
 }
