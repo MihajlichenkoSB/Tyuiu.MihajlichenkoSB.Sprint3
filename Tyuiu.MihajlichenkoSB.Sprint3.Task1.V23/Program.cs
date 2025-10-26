@@ -32,7 +32,7 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task1.V23
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("****************************************************************************");
-            Console.WriteLine($"Произведение (формат) = {result:F12}");
+            Console.WriteLine($"Произведение (округление) = {Math.Round(result, 3)}");
 
             Console.ReadKey();
         }
