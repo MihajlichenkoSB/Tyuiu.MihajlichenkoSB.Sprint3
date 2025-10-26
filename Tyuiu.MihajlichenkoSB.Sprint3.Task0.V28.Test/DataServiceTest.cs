@@ -8,14 +8,17 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task0.V28.Test
         [TestMethod]
         public void TestGetMultiplySeries()
         {
+            // arrange
             DataService ds = new DataService();
             double value = 0.25;
             int startValue = 1;
             int stopValue = 17;
             double expected = 411589.537;
 
+            // act
             double actual = ds.GetMultiplySeries(value, startValue, stopValue);
 
+            // assert
             Assert.AreEqual(expected, actual);
         }
     }
