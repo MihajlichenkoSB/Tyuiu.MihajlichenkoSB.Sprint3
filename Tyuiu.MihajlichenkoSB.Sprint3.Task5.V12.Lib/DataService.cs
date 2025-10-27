@@ -8,17 +8,15 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task5.V12.Lib
         {
             double sum = 0.0;
 
-            for (int i = 1; i <= 3; i++)
+            for (int i = startValue1; i <= stopValue1; i++)
             {
-                for (int k = 1; k <= 10; k++)
+                for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    sum += Math.Cos(k); 
+                    sum += Math.Cos(k) + i;
                 }
             }
 
-            sum += x / 2.0;
-
-            return sum;
+            return Math.Round(sum, 3); 
         }
     }
 }
