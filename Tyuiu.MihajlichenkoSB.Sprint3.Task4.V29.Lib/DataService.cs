@@ -6,15 +6,15 @@ namespace Tyuiu.MihajlichenkoSB.Sprint3.Task4.V29.Lib
     {
         public double Calculate(int startValue, int stopValue)
         {
-                double sum = 0;
+            double sum = 0;
 
-                for (int x = -5; x <= 5; x++)
-                {
-                    if (x == 0) continue;
-                    sum += Math.Cos(x) / x;
-                }
-
-                return sum;
+            for (int x = startValue; x <= stopValue; x++)
+            {
+                if (x == 0) continue;
+                sum += Math.Cos(x) / x;
             }
+
+            return Math.Round(sum, 12); 
+        }
     }
 }
